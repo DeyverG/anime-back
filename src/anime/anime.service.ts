@@ -22,8 +22,10 @@ export const getAnime = async (name: string, page: number, limit: number): Promi
     // add fields pagination
     const animeResponse: GetAnimeResponse = {
       data: anime,
-      current_page: response.pagination.current_page,
-      has_next_page: response.pagination.has_next_page,
+      pagination: {
+        current_page: response.pagination.current_page,
+        has_next_page: response.pagination.has_next_page,
+      }
     }
 
     return animeResponse;

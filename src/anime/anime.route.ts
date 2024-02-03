@@ -4,7 +4,7 @@ const router = express.Router();
 
 router.get('/anime', async (req, res) => {
     // Variables
-    const name = String(req.query.name);
+    const name = String(req.query.q);
     const page = Number(req.query.page) || 1;
     const limit = Number(req.query.limit) || 10;
 

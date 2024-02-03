@@ -17,6 +17,8 @@ export interface Anime {
 
 export interface GetAnimeResponse {
     data: Anime[];
-    current_page: number;
-    has_next_page: boolean;
+    pagination: {
+        current_page: number;
+        has_next_page: boolean;
+    }
 }
